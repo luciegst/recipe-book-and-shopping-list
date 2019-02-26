@@ -1,4 +1,4 @@
-<!-- Create a recipe card -->
+<!-- Create a recipe card structure -->
 <div class="row">
     <div class="col-xs-12">
         <button class="btn btn-success">New recipe</button>
@@ -7,9 +7,12 @@
 <hr>
 <div class="row">
     <div class="col-xs-12">
+    <!-- Display all elements of the array in app recipe item -->
         <app-recipe-item 
         *ngFor="let recipeElement of recipes"
-        [recipe]="recipeElement"></app-recipe-item>
+        [recipe]="recipeElement"
+        (recipeSelected)="onRecipeSelected(recipeElement)"></app-recipe-item>
+        <br>
     </div>
 </div>
 
