@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  //EventEmitter use in directives and components to emit custom events synchronously or asynchronously, and register handlers for those events by subscribing to an instance//
 
-  constructor() { }
+  //@Output to make it listenable from the parents component//
+  @Output() featureSelected = new EventEmitter<string>();
 
-  ngOnInit() {
+
+  // Select method for navigation//
+  onSelect(feature: string) {
+    this.featureSelected.emit(feature)
   }
+  
+ ngOnInit() {
+
+ }
 
 }
