@@ -5,6 +5,8 @@ import { Recipe } from '../recipe.model';
   templateUrl: './recipe-list.component.html',
   styleUrls: ['./recipe-list.component.css']
 })
+
+// Recipe array based on recipe model //
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[] = [
     new Recipe('A test Recipe', 'This is simply a test', 'https://upload.wikimedia.org/wikipedia/commons/3/39/Recipe.jpg'),
