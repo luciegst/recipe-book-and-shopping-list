@@ -1,10 +1,14 @@
 <!-- Card to display all elements  -->
-<a href="#" 
-class="card"
-(click)="onSelected()">
+<a
+style="cursor: pointer"
+class="card nav-link"
+[routerLink]="[index]"
+routerLinkActive="active"
+>
 <div 
 class="card" 
-style="width: 15rem;">
+style="width: 15rem;"
+>
     <img 
     src="{{ recipe.imagePath }}" 
     class="card-img-top" 
