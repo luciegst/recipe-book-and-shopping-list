@@ -17,6 +17,7 @@ export class ShoppingListService {
         this.ingredientsChanged.emit(this.ingredients.slice())
     }
 
+    // method to receive ingredients and display them into shopping list //
     addIngredients(ingredients: Ingredient[]) {
         this.ingredients.push(...ingredients);
         this.ingredientsChanged.emit(this.ingredients.slice())

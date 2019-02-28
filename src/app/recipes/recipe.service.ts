@@ -3,7 +3,7 @@ import { EventEmitter, Injectable } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
 import { ShoppingListService } from '../shopping-list/shopping-list.service';
 
-//To inject a service into a service add @Injectable//
+//To inject a service into a service, add @Injectable//
 @Injectable()
 export class RecipeService {
     recipeSelected = new EventEmitter<Recipe>();
@@ -39,6 +39,7 @@ export class RecipeService {
       return this.recipes.slice();
   }
 
+  // method to receive ingredients and make access to shopping list service //
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.slService.addIngredients(ingredients);
   }

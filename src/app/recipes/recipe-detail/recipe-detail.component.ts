@@ -15,6 +15,7 @@ export class RecipeDetailComponent implements OnInit {
   ngOnInit() {
   }
 
+  //method which execute the click listener and make access to recipe service//
   onAddToShoppingList() {
     this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients);
   }
