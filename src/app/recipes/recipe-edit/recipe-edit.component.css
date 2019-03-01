@@ -2,3 +2,9 @@
   display: flex;
   justify-content: center;
 }
+
+input.ng-invalid.ng-touched,
+.textaera.ng-invalid.ng-touched {
+ border: 2px solid red
+}
+
