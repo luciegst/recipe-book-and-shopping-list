@@ -1,7 +1,7 @@
 <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
   <button type="submit" class="btn btn-success mb-2"
   [disabled]="!recipeForm.valid">Save</button>
-  <button type="button" class="btn btn-danger ml-2 mb-2">Cancel</button>
+  <button type="button" class="btn btn-danger ml-2 mb-2" (click)="onCancel()">Cancel</button>
   <div class="form-group">
     <label for="formGroupExampleInput">Name</label>
     <input 
@@ -16,9 +16,10 @@
     type="text" 
     class="form-control" 
     id="imagePath" 
-    formControlName="imagePath">
+    formControlName="imagePath"
+    #imagePath>
   </div>
-  <img src="" class="img-responsive">
+  <img [src]="imagePath.value" class="img-responsive">
   <div class="form-group">
     <label for="description">Description</label>
     <textarea 
@@ -46,7 +47,7 @@
           formControlName="amount">
         </div>
         <div class="form-group col-2 col-xs-2">
-          <button type="button" class="btn btn-danger">X</button>
+          <button type="button" class="btn btn-danger" (click)="onDeleteIngredient(i)">X</button>
         </div>
       </div>
     </div>
